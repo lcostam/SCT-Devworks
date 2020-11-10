@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :usuarios
   post 'usuarios/:id', to: 'usuarios#desativar'
   post 'tarefas/:id', to: 'tarefas#concluir'
-  root 'home#index'
+  root 'sessions#new'
   get "/login", to: "sessions#new"
   post "/sessions", to: "sessions#create"
   delete "/sessions", to: "sessions#destroy"

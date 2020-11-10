@@ -1,7 +1,52 @@
+
+<div class="card">
+<div class="card-body login-card-body">
+
+
 <%= form_tag sessions_path do %>
-    <%= label_tag "email" %>
-    <%= text_field_tag :email, nil, placeholder: "email" %>
-    <%= label_tag "Password" %>
-    <%= password_field_tag :password, nil, placeholder: "Password" %>
-    <%= submit_tag "Log In"%>
-<% end %>
+
+    <div class="input-group mb-3">
+        <%= text_field_tag :email, nil, placeholder: "Email", class:"form-control" %>
+    
+      <div class="input-group-append">
+        <div class="input-group-text">
+          <span class="fas fa-envelope"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <%= password_field_tag :password, nil, placeholder: "Password", class:"form-control" %>
+      
+      <div class="input-group-append">
+        <div class="input-group-text">
+          <span class="fas fa-lock"></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-8">
+        <div class="icheck-primary">
+
+        </div>
+      </div>
+      <div class="col-4">
+        <%= submit_tag "Acessar", class:'btn btn-primary btn-block'%>
+      </div>
+    </div>
+
+    <% end %>
+
+  <p class="mb-1">
+    <a href="forgot-password.html">Esqueci a minha senha...</a>
+  </p>
+
+</div>
+</div>
+
+
+
+
+    
+    

@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       @usuarioLogado = Usuario.find_by(email: params[:email])
       if @usuarioLogado && @usuarioLogado.authenticate(params[:password])
         session[:usuario_id] = @usuarioLogado.id
-        redirect_to usuarios_path
+        redirect_to tarefas_path
       else  
         redirect_to login_path
       end
