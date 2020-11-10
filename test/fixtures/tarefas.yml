@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descricao: MyText
+  status: MyString
+  prazo: 2020-11-10 00:08:15
+  usuario: one
+
+two:
+  descricao: MyText
+  status: MyString
+  prazo: 2020-11-10 00:08:15
+  usuario: two
