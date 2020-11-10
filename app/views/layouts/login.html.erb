@@ -1,0 +1,24 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>DevWorks | Sistema de Controle de Tarefas (SCT) </title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %></head>
+
+  <body class="hold-transition login-page">
+    <div class="login-box">
+      <div class="login-logo">
+        <a href="login.html"><i class="fab fa-stack-overflow"></i><b>DevWorks</b>SCT</a>
+      </div>
+
+      <div class="card">
+        <div class="card-body login-card-body">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
