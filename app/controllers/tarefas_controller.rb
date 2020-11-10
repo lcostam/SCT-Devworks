@@ -1,11 +1,22 @@
 class TarefasController < ApplicationController
-  before_action :set_tarefa, only: [:show, :edit, :update, :destroy]
+  before_action :set_tarefa, only: [:show, :edit, :update, :destroy, :concluir]
   before_action :authorized
   # GET /tarefas
   # GET /tarefas.json
   def index
-    @tarefas = Tarefa.where(:usuario_id=>@usuarioLogado.id)
+    @tarefas = Tarefa.where(:usuario_id=>@usuarioLogado.id, :status=>"Em Andamento")
+    @tarefasDone = Tarefa.where(:usuario_id=>@usuarioLogado.id, :status=>"Concluída")
   end
+
+  def concluir
+    # @usuario = Usuario.find(params[:id])
+     #Usuario.update(@usuario.id, status:10) 
+     
+       @tarefa.update_attribute(:status, "Concluída")
+       msg = "Desativado"
+     
+     redirect_to tarefas_path, notice: msg
+   end
 
   # GET /tarefas/1
   # GET /tarefas/1.json

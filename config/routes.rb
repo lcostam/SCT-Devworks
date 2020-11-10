@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :tarefas
   resources :usuarios
   post 'usuarios/:id', to: 'usuarios#desativar'
+  post 'tarefas/:id', to: 'tarefas#concluir'
   root 'home#index'
   get "/login", to: "sessions#new"
   post "/sessions", to: "sessions#create"

@@ -1,5 +1,5 @@
 <div class="col-sm-6">
-  <h1><i class="fas fa-puzzle-piece"></i>NOVA TAREFA</h1>
+  <h2><i class="fas fa-puzzle-piece"></i>NOVA TAREFA</h2>
 </div>
 <section class="content">
       <!-- Default box -->
@@ -34,13 +34,18 @@
                 <%= form.text_area :descricao, class:"form-control" , placeholder:"Digite a descrição da tarefa" %>
               </div>
               <div class="form-group ">
-                  <label>Responsável</label>
-                  <%= form.select :usuario_id, [['Leandro', 10], ['Max', 11]], {},{:class=>'form-control'} %>
+              <%= form.label :"Responsável" %>
+              <%= form.select :usuario_id, Usuario.where(status:1).collect {|p| [ p.name, p.id ]},{},{:class=>'form-control'}%>
+                 
               </div>
               <div class="form-group">
                  <%= form.label :"Prazo" %>
                 <%= form.date_select :prazo, class:"form-control" %>
               </div>
+              <div class="d-none">
+                  <label>Status</label>
+                  <%= form.select :status, [['Em Andamento', 'Em Andamento']], {},{:class=>'form-control'} %>
+                </div>
               
               <div class="box-footer">
               <%= form.submit:"Cadastrar", class:"btn btn-success right"  %>
@@ -60,4 +65,3 @@
       <!-- /.card -->
 
     </section>
-<
