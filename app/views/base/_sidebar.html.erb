@@ -20,7 +20,7 @@
           </div>
           <div class="text-white">
             <p><%=current_user.name%>
-            <%= link_to "Sair", sessions_path, method: :delete, class:"d-block" %></p>
+            <%= link_to t('logout'), sessions_path, method: :delete, class:"d-block" %></p>
           </div>
         </div>
       <%end%>
@@ -33,7 +33,7 @@
             <a href="/tarefas" class="nav-link">
               <i class="nav-icon fas fa-tasks"></i>
               <p>
-                Minhas Tarefas
+                <%= t('tasks')%>
               </p>
             </a>
           </li>
@@ -42,7 +42,7 @@
             <a href="/usuarios" class="nav-link">
               <i class="nav-icon fas fa-user-plus"></i>
               <p>
-                Usuários
+              <%= t('users')%>
               </p>
             </a>
           </li>

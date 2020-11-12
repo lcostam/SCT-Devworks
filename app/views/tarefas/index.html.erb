@@ -1,5 +1,5 @@
 <div class="col-sm-6">
-  <h1><i class="fas fa-tasks"> </i> MINHAS TAREFAS </i></h1>
+  <h1><i class="fas fa-tasks"> </i> <%=t('tasks')%> </i></h1>
 </div>
 <section class="content">
   <div class="card">
@@ -21,13 +21,13 @@
                       #
                   </th>
                   <th style="width: 20%">
-                      Descrição da Tarefa
+                      <%=t('taskDesc')%>
                   </th>
                   <th style="width: 20%">
-                      Responsável
+                    <%=t('responsible')%>
                   </th>
                   <th>
-                      Prazo
+                    <%=t('deadline')%>
                   </th>
                   <th style="width: 8%" class="text-center">
                       Status
@@ -75,7 +75,7 @@
  </section>
  <div class="row">
  <div class="col-md-12 text-right">
-   <%= link_to 'Nova Tarefa', new_tarefa_path, class: "btn btn-primary" %>
+   <%= link_to t('newTask'), new_tarefa_path, class: "btn btn-primary" %>
  </div>
  </div>
  <BR><BR>
@@ -85,7 +85,7 @@
             <thead>
                 <tr>
                     <th style="width: 25%" colspan="5">
-                        TAREFAS CONCLUÍDAS
+                        <%=t('taskDone')%>
                     </th>
                 </tr>
             </thead>

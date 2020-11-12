@@ -16,7 +16,7 @@
     </div>
 
     <div class="input-group mb-3">
-      <%= password_field_tag :password, nil, placeholder: "Password", class:"form-control" %>
+      <%= password_field_tag :password, nil, placeholder: t('password'), class:"form-control" %>
       
       <div class="input-group-append">
         <div class="input-group-text">
@@ -32,16 +32,20 @@
         </div>
       </div>
       <div class="col-4">
-        <%= submit_tag "Acessar", class:'btn btn-primary btn-block'%>
+        <%= submit_tag t('login'), class:'btn btn-primary btn-block'%>
       </div>
     </div>
 
     <% end %>
 
   <p class="mb-1">
-    <a href="forgot-password.html">Esqueci a minha senha...</a>
+    <!--<a href="forgot-password.html">Esqueci a minha senha...</a>-->
   </p>
 
+</div>
+<div class="d-flex justify-content-around">
+  <div><%= link_to t('versionE'), locale: "en" %></div>
+  <div><%= link_to t('versionP'), locale: "pt-BR" %></div>
 </div>
 </div>
 

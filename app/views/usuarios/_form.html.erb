@@ -1,6 +1,6 @@
 
 <div class="col-sm-6">
-  <h1><i class="fas fa-users"> </i> NOVO USUÁRIO </i></h1>
+  <h1><i class="fas fa-users"> </i> <%= t('users')%></i></h1>
 </div>
 <!-- Main content -->
     <section class="content">
@@ -25,20 +25,20 @@
 
               <div class="box-body">
                 <div class="form-group">
-                    <%= form.label :"Nome Completo" %>
-                    <%= form.text_field :name, class:"form-control" , placeholder:"Enter nome completo" %>
+                    <%= form.label t('fullName') %>
+                    <%= form.text_field :name, class:"form-control" , placeholder:t('enterFullName') %>
                 </div>
                 <div class="form-group">
                   <%= form.label :"Email" %>
                   <%= form.email_field :email, class:"form-control" , placeholder:"Enter email" %>
                 </div>
                 <div class="form-group">
-                  <%= form.label :"Senha" %>
-                  <%= form.password_field :password, class:"form-control" , placeholder:"Enter senha" %>
+                  <%= form.label t('password') %>
+                  <%= form.password_field :password, class:"form-control" , placeholder:t('enterPassword') %>
                 </div>
                 <div class="form-group">
-                 <%= form.label :"Confirme a senha" %>
-                  <%= form.password_field :password_confirmation, class:"form-control" , placeholder:"confirme a senha" %>
+                 <%= form.label t('confirmPassword') %>
+                  <%= form.password_field :password_confirmation, class:"form-control" , placeholder:t('confirmPassword') %>
                 </div>
 
                 <div class="form-group ">
@@ -49,8 +49,8 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
-              <%= form.submit:"Cadastrar", class:"btn btn-primary"  %>
-              <%= link_to 'Retornar', usuarios_path, type:'button', class: "btn btn-secondary" %>
+              <%= form.submit t('register'), class:"btn btn-primary"  %>
+              <%= link_to t('cancel'), usuarios_path, type:'button', class: "btn btn-secondary" %>
               </div>
             <% end %>
           </div>
