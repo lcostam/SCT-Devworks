@@ -21,6 +21,8 @@ class ApplicationController < ActionController::Base
       if locale.present?
         I18n.locale = locale
         cookies[:locale] = { value: locale, expires: 30.days.from_now}
+      else
+        I18n.locale = 'en'
       end
      end
 
