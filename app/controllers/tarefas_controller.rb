@@ -1,6 +1,6 @@
 class TarefasController < ApplicationController
   before_action :set_tarefa, only: [:show, :edit, :update, :destroy, :concluir]
-  #before_action :authorized
+  before_action :authorized
   # GET /tarefas
   # GET /tarefas.json
   def index
