@@ -5,9 +5,9 @@ feature 'Acessar Página Usuarios' do
     
         visit usuarios_path
       
-        puts 'teste' + current_path
+    #    puts 'teste' + current_path
         
-        expect(current_path).to have_content('Status')
+        expect(current_path).to have_content(login_path)
   end
 
   

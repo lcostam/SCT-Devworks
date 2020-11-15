@@ -11,9 +11,9 @@ feature 'Visitante acessa Tela Login' do
     fill_in 'email', with: 'lcostam@gmail.com'
     fill_in 'password', with: '123'
     click_on 'submitButton'
-
-    expect(tarefas_path).to eq(tarefas_path)
-   # expect(usuarios_path).to have_content('English Version')
+   
+    expect(current_path).to eq(tarefas_path)
+    # expect(usuarios_path).to have_content('English Version')
   end
 
 
